@@ -3,45 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boyede Oyeewale Oyeyanju | Data Analyst Portfolio</title>
+  <title>Boyede Oyewale Oyeyanju | Data Analyst Portfolio</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f9fc;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
       color: #1f2937;
     }
-    header {
+
+    /* NAVBAR */
+    nav {
       background: #0f172a;
       color: white;
-      padding: 60px 20px;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .logo {
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
       text-align: center;
+      padding: 60px 20px;
+      background: white;
     }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
+
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2563eb;
+      margin-bottom: 15px;
     }
-    header p {
-      font-size: 18px;
-      color: #cbd5e1;
+
+    .hero h1 {
+      margin: 10px 0 5px;
     }
+
+    .hero p {
+      color: #6b7280;
+      margin: 5px 0;
+    }
+
+    /* SECTIONS */
     section {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
+
     h2 {
       border-left: 5px solid #2563eb;
       padding-left: 10px;
       margin-bottom: 20px;
     }
+
+    /* CARDS */
     .card {
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       margin-bottom: 20px;
     }
+
     .skills span {
       display: inline-block;
       background: #e2e8f0;
@@ -50,81 +89,118 @@
       margin: 5px;
       font-size: 14px;
     }
-    a {
-      color: #2563eb;
+
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2563eb;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
       text-decoration: none;
     }
+
+    .btn:hover {
+      background: #1e40af;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 30px;
       background: #0f172a;
       color: white;
+      padding: 25px;
       margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Boyede Oyeewale Oyeyanju</h1>
-  <p>Data Analyst | SQL | Power BI | Excel | Data Storytelling</p>
-  <p>Turning raw data into actionable business insights</p>
-</header>
+<!-- NAV -->
+<nav>
+  <div class="logo">Portfolio</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section>
+<!-- HERO -->
+<div class="hero">
+  <img src="images/profile.jpg" alt="Profile Picture">
+  <h1>Boyede Oyeewale Oyeyanju</h1>
+  <p>Data Analyst | SQL | Power BI | Excel | MySQL | DAX</p>
+  <p>Turning data into actionable business insights</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
   <div class="card">
     <p>
-      Data Analyst with strong skills in SQL, Power BI, and Excel, focused on transforming raw datasets into meaningful business insights. Passionate about building data-driven solutions that support decision-making in business and finance.
+      I am a Data Analyst with strong skills in SQL, Power BI, Excel, and MySQL.
+      I specialize in building data-driven dashboards and analytical solutions
+      that help businesses make better decisions.
     </p>
   </div>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
   <h2>Skills</h2>
   <div class="card skills">
     <span>SQL</span>
     <span>MySQL</span>
-    <span>Excel</span>
     <span>Power BI</span>
-    <span>Data Analysis</span>
+    <span>Excel</span>
     <span>DAX</span>
+    <span>Data Analysis</span>
   </div>
 </section>
 
-<section>
-  <h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Featured Project</h2>
 
   <div class="card">
-    <h3>Credit Risk Analysis Dashboard</h3>
+    <img class="project-img" src="images/executive-overview.png" alt="Credit Risk Dashboard">
+
+    <h3>Credit Risk & Loan Default Analysis Dashboard</h3>
+
     <p>
-      Built an end-to-end credit risk analytics solution using MySQL and Power BI to analyze loan default behavior across 20,000+ records. Identified key risk drivers such as credit score and debt-to-income ratio.
+      Built a full end-to-end credit risk analytics solution using MySQL and Power BI.
+      The project analyzes 20,000+ loan records to identify high-risk customers based on
+      credit score, income, and debt-to-income ratio.
     </p>
-    <p><strong>Tools:</strong> MySQL, Power BI, SQL</p>
-    <a href="https://github.com/Oyewale325" target="_blank">View Project on GitHub</a>
-  </div>
 
-  <div class="card">
-    <h3>Coming Soon: Project 2</h3>
-    <p>More data analysis projects will be added here.</p>
-  </div>
+    <p><strong>Tools:</strong> MySQL, SQL, Power BI, Excel</p>
 
-  <div class="card">
-    <h3>Coming Soon: Project 3</h3>
-    <p>More dashboards and analytics work in progress.</p>
+    <a class="btn" href="https://github.com/Oyewale325/Credit-Risk-Analysis-Project" target="_blank">
+      View Full Project on GitHub
+    </a>
   </div>
-
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <div class="card">
     <p>Email: <a href="mailto:oyewale.boyede@gmail.com">oyewale.boyede@gmail.com</a></p>
-    <p>LinkedIn: <a href="http://www.linkedin.com/in/oyewale-boyede-oyeyanju" target="_blank">View Profile</a></p>
-    <p>GitHub: <a href="https://github.com/Oyewale325" target="_blank">github.com/Oyewale325</a></p>
+    <p>LinkedIn: <a href="http://www.linkedin.com/in/oyewale-boyede-oyeyanju" target="_blank">Profile</a></p>
+    <p>GitHub: <a href="https://github.com/Oyewale325" target="_blank">GitHub</a></p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Boyede Oyewale Oyeyanju | Data Analyst Portfolio</p>
 </footer>
