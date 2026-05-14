@@ -1,133 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boyede Oyewale Oyeyanju | Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boyede Oyewale Oyeyanju | Data & IT Portfolio</title>
 
   <style>
-    body {
-      margin: 0;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      color: #1f2937;
+      background:#f4f7fb;
+      color:#1f2937;
+      line-height:1.6;
     }
 
-    /* NAV */
-    nav {
-      background: #0f172a;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* NAVBAR */
+    nav{
+      background:#0f172a;
+      color:white;
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-size: 14px;
+    nav h2{
+      font-size:22px;
     }
 
-    .logo {
-      font-weight: bold;
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:15px;
+      transition:0.3s;
     }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: white;
+    nav a:hover{
+      color:#60a5fa;
     }
 
-    .hero img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #2563eb;
+    /* HERO SECTION */
+    .hero{
+      background:linear-gradient(to right,#0f172a,#1e3a8a);
+      color:white;
+      text-align:center;
+      padding:80px 20px;
     }
 
-    .hero h1 {
-      margin: 15px 0 5px;
+    .hero img{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      object-position:center top;
+      border:5px solid white;
+      margin-bottom:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.3);
     }
 
-    .hero p {
-      margin: 5px 0;
-      color: #6b7280;
+    .hero h1{
+      font-size:42px;
+      margin-bottom:10px;
     }
 
-    /* SECTIONS */
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+    .hero p{
+      font-size:18px;
+      opacity:0.95;
     }
 
-    h2 {
-      border-left: 5px solid #2563eb;
-      padding-left: 10px;
-      margin-bottom: 20px;
+    .hero .hero-sub{
+      margin-top:10px;
+      font-size:16px;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    /* CARDS */
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      margin-bottom: 20px;
+    /* SECTION */
+    section{
+      max-width:1200px;
+      margin:auto;
+      padding:70px 25px;
+    }
+
+    section h2{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:32px;
+      color:#0f172a;
+    }
+
+    /* ABOUT */
+    .about-card{
+      background:white;
+      padding:35px;
+      border-radius:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      text-align:center;
     }
 
     /* SKILLS */
-    .skills span {
-      display: inline-block;
-      background: #e2e8f0;
-      padding: 8px 12px;
-      border-radius: 20px;
-      margin: 5px;
-      font-size: 14px;
+    .skills-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
     }
 
-    /* PROJECT IMAGE */
-    .project-img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+    .skill{
+      background:white;
+      padding:12px 20px;
+      border-radius:30px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.08);
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: #2563eb;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 6px;
-      text-decoration: none;
+    .skill:hover{
+      transform:translateY(-4px);
     }
 
-    .btn:hover {
-      background: #1e40af;
+    /* PROJECTS */
+    .project-card{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      margin-bottom:50px;
+      transition:0.3s;
     }
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      background: #0f172a;
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
+    .project-card:hover{
+      transform:translateY(-6px);
     }
+
+    .project-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:10px;
+      padding:15px;
+    }
+
+    .project-images img{
+      width:100%;
+      border-radius:10px;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:30px;
+    }
+
+    .project-content h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .project-content p{
+      margin-bottom:15px;
+      color:#4b5563;
+    }
+
+    .tools{
+      margin-top:15px;
+      margin-bottom:20px;
+      font-weight:bold;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#2563eb;
+      color:white;
+      padding:12px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#1d4ed8;
+    }
+
+    /* CONTACT */
+    .contact{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:17px;
+    }
+
+    .contact a{
+      color:#93c5fd;
+      text-decoration:none;
+    }
+
+    footer{
+      background:#020617;
+      color:white;
+      text-align:center;
+      padding:18px;
+      font-size:14px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
-  <div class="logo">Portfolio</div>
+  <h2>Portfolio</h2>
+
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -137,73 +237,151 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
+
   <img src="images/profile.jpg" alt="Profile Picture">
+
   <h1>Boyede Oyewale Oyeyanju</h1>
-  <p>Data Analyst | SQL | Power BI | Excel | MySQL | DAX</p>
-  <p>Turning data into actionable business insights</p>
-</div>
+
+  <p>
+    Data Analyst | IT Support Specialist | Network Administrator
+  </p>
+
+  <p class="hero-sub">
+    Transforming business data into actionable insights through analytics,
+    dashboards, database solutions, and IT infrastructure support.
+  </p>
+
+</section>
 
 <!-- ABOUT -->
 <section id="about">
+
   <h2>About Me</h2>
-  <div class="card">
+
+  <div class="about-card">
+
     <p>
-      I am a Data Analyst with strong skills in SQL, Power BI, Excel, MySQL, and DAX.
-      I specialize in transforming raw data into meaningful insights that support business decision-making.
+      I am a Data Analyst and IT Professional with experience in SQL, Power BI,
+      Excel, MySQL, Networking, IT Support, and Business Intelligence solutions.
+      I build interactive dashboards, perform analytical reporting, and support
+      technology systems that help organizations make informed decisions.
     </p>
+
   </div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="card skills">
-    <span>SQL</span>
-    <span>MySQL</span>
-    <span>Power BI</span>
-    <span>Excel</span>
-    <span>DAX</span>
-    <span>Data Analysis</span>
+
+  <h2>Technical Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill">SQL</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Excel</div>
+    <div class="skill">DAX</div>
+    <div class="skill">Data Analysis</div>
+    <div class="skill">Networking</div>
+    <div class="skill">Windows Server</div>
+    <div class="skill">IT Support</div>
+    <div class="skill">Database Management</div>
+    <div class="skill">Active Directory</div>
+    <div class="skill">Microsoft Azure</div>
+
   </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
+
   <h2>Featured Project</h2>
 
-  <div class="card">
+  <div class="project-card">
 
-    <img class="project-img" src="images/executive-overview.png" alt="Credit Risk Dashboard">
+    <!-- PROJECT IMAGES -->
+    <div class="project-images">
 
-    <h3>Credit Risk & Loan Default Analysis Dashboard</h3>
+      <img src="images/executive-overview.png" alt="Dashboard Overview">
 
-    <p>
-      This project analyzes 20,000+ loan records using SQL and Power BI to identify key risk factors such as credit score, income, and debt-to-income ratio. It supports financial decision-making and risk segmentation.
-    </p>
+      <img src="images/risk-analysis.png" alt="Risk Analysis">
 
-    <p><strong>Tools Used:</strong> MySQL, SQL, Power BI, Excel, DAX</p>
+      <img src="images/risk-segmentation-matrix.png" alt="Risk Segmentation">
 
-    <a class="btn" href="https://github.com/Oyewale325/Credit-Risk-Analysis-Project" target="_blank">
+      <img src="images/customer-risk-detail.png" alt="Customer Risk Detail">
+
+    </div>
+
+    <!-- PROJECT CONTENT -->
+    <div class="project-content">
+
+      <h3>Credit Risk & Loan Default Analysis Dashboard</h3>
+
+      <p>
+        Built a full end-to-end credit risk analytics solution using MySQL and Power BI.
+        The project analyzes 20,000+ loan records to identify high-risk borrowers based
+        on credit score, debt-to-income ratio, income level, and loan purpose.
+      </p>
+
+      <p>
+        Interactive dashboards were developed to support financial institutions in
+        risk segmentation, loan performance monitoring, and strategic lending decisions.
+      </p>
+
+      <div class="tools">
+        Tools Used: MySQL, SQL, Power BI, Excel, DAX
+      </div>
+
+      <a class="btn"
+      href="https://github.com/Oyewale325/Credit-Risk-Analysis-Project"
+      target="_blank">
+
       View Full Project on GitHub
-    </a>
+
+      </a>
+
+    </div>
 
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact">
+
   <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:oyewale.boyede@gmail.com">oyewale.boyede@gmail.com</a></p>
-    <p>LinkedIn: <a href="http://www.linkedin.com/in/oyewale-boyede-oyeyanju" target="_blank">Profile</a></p>
-    <p>GitHub: <a href="https://github.com/Oyewale325" target="_blank">GitHub</a></p>
-  </div>
+
+  <p>Email: <a href="mailto:oyewale.boyede@gmail.com">
+    oyewale.boyede@gmail.com
+  </a></p>
+
+  <p>Phone: <a href="tel:+2348139475559">
+    +234 813 947 5559
+  </a></p>
+
+  <p>LinkedIn:
+    <a href="http://www.linkedin.com/in/oyewale-boyede-oyeyanju" target="_blank">
+      View Profile
+    </a>
+  </p>
+
+  <p>GitHub:
+    <a href="https://github.com/Oyewale325" target="_blank">
+      Oyewale325
+    </a>
+  </p>
+
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Boyede Oyewale Oyeyanju | Data Analyst Portfolio</p>
+
+  © 2026 Boyede Oyewale Oyeyanju | Data & IT Portfolio
+
 </footer>
 
 </body>
